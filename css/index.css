@@ -44,13 +44,19 @@ header {
 .main-content .hero-section{
     display: grid;
     grid-template-columns: 1fr auto 1fr;
-    flex-direction: row;
     align-items: center;
-    padding: 13px;
+    min-height: 64px;
+    padding: 8px 20px;
     gap: 8px;
-    background-color: #8B5E3C;
-
+    background-color: #593d28;
 }
+.hero-section .navbar-brand {
+    grid-column: 2;
+    justify-self: center;
+    padding: 0;
+    margin: 0;
+}
+
 .hero-section button {
     width: auto;
     height: 30px;
@@ -59,6 +65,7 @@ header {
     box-shadow: none;
     color: #eeeaea;
     cursor: pointer;
+    font-size: 0.75rem;
 }
 .hero i,
 .hero svg{
@@ -73,32 +80,47 @@ header {
 }
 
  .hero-section img {
-    width: 300px;
+    width: 100px;
+    max-width: 100%;
+     max-height: 48px;
     height: auto;
-    max-height: 50px;
-    max-width: 140px;
-    object-fit: cover;
     display: block;
-    margin: 0 auto;
-
 }
 
-.hero-section .navbar-brand {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
 
 .hero-section .btn-search {
-    justify-self: start;
+    width: 48px;
+    max-width: 48px;
+    padding: 0;
+    display: grid;
+    place-items: center;
 }
+.hero-section .icon-search {
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
 
 .hero-section .hero-actions {
     display: flex;
+    align-items: center;
     justify-content: flex-end;
     gap: 8px;
+    white-space: nowrap;
+}
+
+.hero-section .btn-idioma,
+.hero-section .btn-tienda {
+    min-width: 48px;
+    padding: 4px;
+}
+
+.hero-section .btn-idioma {
+    font-size: 2.0rem;
+}
+
+.hero-section .icon-store {
+    font-size: 1rem;
 }
 
 .main-section {
@@ -107,19 +129,17 @@ header {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    gap: 20px;
+    gap: 5px 2px;
 }
 .img-section{
-    width: 100%;
-    height: auto; 
-    object-fit:contain; 
-    display: block;
+     aspect-ratio: 16 / 7;
+    overflow: hidden;
     
 }
 
 .img-section img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     display: block;
 }
