@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<HTML>
+<HTML lang="es">
 
 <head>
     <meta charset="UTF-8">
     <!-- para indicar al navegadodr que codificacion de caracteres debe usar para mostrar una pagina.-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafetano Demo</title>
 
+    <title>Cafetano Demo</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -15,7 +15,7 @@
     <link href="https://jsdelivr.net" rel="stylesheet">
 
     <script src="" defer></script>
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> -->
 </head>
 
 <body>
@@ -23,36 +23,49 @@
         <div class="header-container">
             <p> "CAFÉ 100% HONDUREÑO" </p>
         </div>
-    </header>
-    <main class="main-content">
-        <div class="">
-            <div class="hero hero-section">
-                <button class="btn-search" type="button">
+        <a class="navbar-brand" href="#">
+            <img src="./imgs/logoCafe.png" alt="Logo de Café">
+        </a>
+        <!-- Un solo contenedor de navegación para todo el menú -->
+        <nav class="main-navigation" aria-label="Navegación principal">
+            <!-- Grupo 1: Enlaces de texto -->
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+            </ul>
+            <!-- Grupo 2: Acciones y Botones (Búsqueda, Idioma, Tienda) -->
+            <div class="nav-actions">
+                <!-- Botón de búsqueda -->
+                <button class="btn-search" type="button" aria-label="Buscar">
                     <span class="icon-search">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </span>
                 </button>
-                <a class="navbar-brand" href="#"><img src="./imgs/logoCafe.png" alt="Imagen logo"></a>
-                <div class="hero-actions">
-                    <button class="btn-idioma" type="button">
-                        <span class="icon-language">
-                            <i class="fa-solid fa-earth-americas"></i>
-                        </span>
-                    </button>
-                    <button class="btn-tienda" type="button">
-                        <span class="icon-store">
-                            <i class="fa-solid fa-store"></i>
-                        </span>
-                    </button>
-                </div>
+                <!-- Botón de idioma -->
+                <button class="btn-idioma" type="button" aria-label="Cambiar idioma">
+                    <span class="icon-language">
+                        <i class="fa-solid fa-earth-americas"></i>
+                    </span>
+                </button>
+                <!-- Botón de tienda -->
+                <button class="btn-tienda" type="button" aria-label="Ver tienda">
+                    <span class="icon-store">
+                        <i class="fa-solid fa-store"></i>
+                    </span>
+                </button>
             </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div>
+
             <div class="main-section">
                 <div class="gallery-info-visible">
                     <div class="img-section">
                         <img src="./imgs/cafe1.png" alt="Taza de café">
                     </div>
                     <div class="aditional-info">
-                        <p class="paragraph">EL CAFÉ QUE NOS MUEVE</p>
+                        <h2 class="paragraph">EL CAFÉ QUE NOS MUEVE</h2>
                         <p class="title_one"><strong> Una colección especial <br> que inspira </strong></p>
                         <p>Un café de strong <strong>Cafetano</strong> que disfrutas hoy nace de un esfuerzo en conjunto
                             de tres generaciones cafetaleras.
@@ -69,14 +82,8 @@
 
 
         </div>
-        <h6>la otra parte del main</h6>
+        <p>la otra parte del main</p>
 
-
-        <script>
-
-
-
-        </script>
 
     </main>
     <footer>
