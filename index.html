@@ -3,97 +3,95 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- para indicar al navegadodr que codificacion de caracteres debe usar para mostrar una pagina.-->
+    <!-- para indicar al navegador que codificacion de caracteres debe usar para mostrar una pagina.-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Cafetano Demo</title>
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- lo usare luego-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
-    <link href="https://jsdelivr.net" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
 
-    <script src="" defer></script>
-    <!-- <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> -->
+    <script src="" defer></script> <!-- lo usare luego-->
+
 </head>
 
 <body>
     <header>
         <div class="header-container">
-            <p> "CAFÉ 100% HONDUREÑO" </p>
+            <p> CAFÉ 100% HONDUREÑO </p>
         </div>
-        <a class="navbar-brand" href="#">
-            <img src="./imgs/logoCafe.png" alt="Logo de Café">
-        </a>
-        <!-- Un solo contenedor de navegación para todo el menú -->
         <nav class="main-navigation" aria-label="Navegación principal">
-            <!-- Grupo 1: Enlaces de texto -->
+            <button class="btn-menu" type="button" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="./imgs/logoCafe.png" alt="Logo de Café">
+            </a>
             <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="index.html">Inicio</a></li>
             </ul>
-            <!-- Grupo 2: Acciones y Botones (Búsqueda, Idioma, Tienda) -->
             <div class="nav-actions">
-                <!-- Botón de búsqueda -->
                 <button class="btn-search" type="button" aria-label="Buscar">
-                    <span class="icon-search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </span>
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
                 </button>
-                <!-- Botón de idioma -->
                 <button class="btn-idioma" type="button" aria-label="Cambiar idioma">
-                    <span class="icon-language">
-                        <i class="fa-solid fa-earth-americas"></i>
-                    </span>
+                    <i class="fa-solid fa-earth-americas" aria-hidden="true"></i>
                 </button>
-                <!-- Botón de tienda -->
                 <button class="btn-tienda" type="button" aria-label="Ver tienda">
-                    <span class="icon-store">
-                        <i class="fa-solid fa-store"></i>
-                    </span>
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
                 </button>
             </div>
         </nav>
     </header>
-
     <main class="main-content">
         <div>
-
             <div class="main-section">
                 <div class="gallery-info-visible">
                     <div class="img-section">
                         <img src="./imgs/cafe1.png" alt="Taza de café">
                     </div>
                     <div class="aditional-info">
-                        <h2 class="paragraph">EL CAFÉ QUE NOS MUEVE</h2>
-                        <p class="title_one"><strong> Una colección especial <br> que inspira </strong></p>
-                        <p>Un café de strong <strong>Cafetano</strong> que disfrutas hoy nace de un esfuerzo en conjunto
+                        <h1 class="main-title">EL CAFÉ QUE NOS MUEVE</h1>
+                        <p class="second-title"><font-weight> Una colección especial que inspira</font-weight></p>
+                        <p>Un café de <strong>Cafetano</strong> que disfrutas hoy nace de un esfuerzo en conjunto
                             de tres generaciones cafetaleras.
                             <br> Somos productores de café hondureño de calidad. De nuestro amor por este maravilloso
-                            grano nace la excelencia detrás de cada taza que disfurtas
+                            grano nace la excelencia detrás de cada taza que disfrutas.
                         </p>
-                        <button class="btn-accion" type="button">Comprar ahora</button>
+                        <button class="btn-accion" type="button">Patrimonio</button>
                     </div>
                 </div>
                 <div class="gallery-info-oculta"> </div>
-
-
             </div>
-
-
+            <div>
+                <div class="gallery-info-visible">
+                    <div class="img-section">
+                        <img src="./imgs/CafeMujer.png" alt="Taza de café">
+                    </div>
+                    <a class="navbar-brand" href="#">
+                        <img src="./imgs/logoCafe.png" alt="Logo de Café">
+                    </a>
+                    <div class="aditional-info">
+                        <p class="second-title"><font-weight>La excelencia es nuestra misión</font-weight></p>
+                        <p>El café produducido en nuestra plantación se exporta a distintos países. Ofrecemos una
+                            calidad excepcional en todas nuestras cafeterías Cafetano.
+                            <br> Cafenano ofrece una variedad de productos basados en recetas inspirados tanto en la
+                            cocina Italiaana como hondureña.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
+
         <p>la otra parte del main</p>
-
-
     </main>
     <footer>
         <p>aqui para el pie de pagina</p>
     </footer>
 
 
-
-
 </body>
-
 
 </HTML>
