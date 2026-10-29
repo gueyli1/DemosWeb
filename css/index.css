@@ -148,7 +148,6 @@ header {
     }
 }
 
-
 .main-content {
     margin-top: 10px 0;
     width: 100%;
@@ -169,7 +168,7 @@ header {
 }
 
 .img-section {
-    
+
     overflow: hidden;
 
 }
@@ -179,7 +178,7 @@ header {
     width: 100%;
     height: auto;
     object-fit: cover;
-    
+
 }
 
 .aditional-info {
@@ -219,7 +218,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     float: none;
     height: auto;
     margin: 0;
@@ -234,4 +233,117 @@ header {
     max-height: 42px;
     height: auto;
     object-fit: contain;
+}
+
+.second-gallery-info-visible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+
+}
+
+.second-gallery-info-visible .info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 0 1rem 0;
+}
+
+.second-gallery-info-visible .info-section .p-1 {
+    font-size: 0.8rem;
+    word-spacing: 0.5em;
+    padding: 0.2rem 0;
+    margin-bottom: 5px;
+    color: #f41f17;
+    text-transform: uppercase;
+}
+
+.second-gallery-info-visible .info-section h2 {
+    font-weight: bold;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+
+
+}
+
+.second-gallery-info-visible .info-section .p-2 {
+    font-size: 1rem;
+    padding: 0.2rem 0;
+    margin-bottom: 5px;
+    color: black;
+    align-items: center;
+}
+
+.second-gallery-info-visible .info-section .btn-services {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+
+}
+
+.second-gallery-info-visible .info-section .img-section img {
+    overflow: hidden;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.second-gallery-info-visible .info-section p {
+    font-size: 1rem;
+    padding: 0.2rem 0;
+    margin-bottom: 5px;
+    color: black;
+    align-items: center;
+}
+
+.principal-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    background-color: black;
+    min-height: 35svh;
+    /* small  viewport, 1svh = 8px */
+}
+
+.cita::before {
+    content: "“";
+    color: #b98b5e;
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+
+.principal-info .cita {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: 1rem;
+    max-width: 600px;
+}
+
+.principal-info .btn-more-information {
+    background-color: var(--primary-color);
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+
 }
