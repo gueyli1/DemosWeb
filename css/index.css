@@ -64,10 +64,11 @@ header {
     font-size: 20px;
 }
 
+/*
 .main-navigation .nav-links,
 .main-navigation .btn-idioma {
     display: none;
-}
+} */
 
 .main-navigation .navbar-brand {
     display: block;
@@ -99,57 +100,9 @@ header {
     font-size: 19px;
 }
 
-@media (min-width: 768px) {
-    .main-navigation {
-        display: flex;
-        justify-content: space-between;
-    }
 
-    .main-navigation .btn-menu {
-        display: none;
-    }
-
-    .main-navigation .navbar-brand {
-        display: block;
-        float: none;
-        height: auto;
-        margin: 0;
-        padding: 0;
-    }
-
-    .main-navigation .navbar-brand img {
-        display: block;
-        width: 100px;
-        max-width: 100%;
-        max-height: 42px;
-        height: auto;
-        object-fit: contain;
-    }
-
-    .main-navigation .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        margin: 0;
-        list-style: none;
-    }
-
-    .main-navigation .nav-actions {
-        margin-left: auto;
-    }
-
-    .main-navigation .nav-links a {
-        color: white;
-        text-decoration: none;
-    }
-
-    .main-navigation .btn-idioma {
-        display: grid;
-    }
-}
 
 .main-content {
-    margin-top: 10px 0;
     width: 100%;
 
 }
@@ -203,15 +156,32 @@ header {
 
 }
 
-.aditional-info .btn-accion {
+.btn-accion,
+.btn-services,
+.btn-more-information,
+.btn-instagram {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    border: none;
     background-color: var(--primary-color);
     color: white;
-    border: none;
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
     margin-top: 10px;
     border-radius: 5px;
+}
+.btn-accion:hover,
+.btn-services:hover,
+.btn-more-information:hover,
+.btn-instagram:hover {
+    background-color: #a77d50;
+} 
+.btn-more-information,
+.btn-instagram {
+    font-size: 0.9rem;
+    text-transform: uppercase;
 }
 
 .gallery-info-visible .navbar-brand {
@@ -264,7 +234,7 @@ header {
     font-weight: bold;
     color: black;
     font-family: "Montserrat", sans-serif;
-    font-weight: 800;
+   
 
 
 }
@@ -274,20 +244,10 @@ header {
     padding: 0.2rem 0;
     margin-bottom: 5px;
     color: black;
-    align-items: center;
+    
 }
 
-.second-gallery-info-visible .info-section .btn-services {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 10px;
-    border-radius: 5px;
 
-}
 
 .second-gallery-info-visible .info-section .img-section img {
     overflow: hidden;
@@ -319,7 +279,7 @@ header {
     /* small  viewport, 1svh = 8px */
 }
 
-.cita::before {
+blockquote.cita::before {
     content: "“";
     color: #b98b5e;
     font-size: 2rem;
@@ -335,19 +295,6 @@ header {
     max-width: 600px;
 }
 
-.principal-info .btn-more-information {
-    background-color: var(--primary-color);
-    color: white;
-    text-transform: uppercase;
-    border: none;
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    margin-top: 10px;
-    border-radius: 5px;
-
-}
-
 .collage-info {
     display: flex;
     flex-direction: column;
@@ -359,11 +306,12 @@ header {
 }
 
 .collage-info .collage-img-section {
-
     display: grid;
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-auto-rows: minmax(100px, auto);
     gap: 8px;
 
     grid-template-areas:
@@ -402,14 +350,6 @@ header {
 }
 
 
-/* ntd:child se usa para seleccionar elementos hermanos */
-/*
-.collage-img-section img:nth-child(1) { grid-column: 1 / 3; grid-row:  1; }
-.collage-img-section img:nth-child(2) { grid-column: 3/ 6;  grid-row: 1; }
-.collage-img-section img:nth-child(3) { grid-column:1/2;  grid-row: 2; }
-.collage-img-section img:nth-child(4) { grid-column: 2 / 4; grid-row: 2; }
-.collage-img-section img:nth-child(5) { grid-column: 4 / 6;  grid-row: 2; } */
-
 .collage-info .collage-info-section {
     display: flex;
     flex-direction: column;
@@ -419,19 +359,6 @@ header {
     padding: 0 0 1rem 0;
     color: white;
     background-color: #1d1b1b;
-}
-
-.collage-info-section .btn-instagram {
-    background-color: var(--primary-color);
-    color: white;
-    text-transform: uppercase;
-
-    border: none;
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    margin-top: 10px;
-    border-radius: 5px;
 }
 
 .collage-info-section p {
@@ -459,8 +386,7 @@ header {
 .footer-info .p {
     font-size: 0.8rem;
     padding: 0.2rem 0;
-    margin: 2rem 0 2rem 0;
-    margin-bottom: 2.5px;
+    margin: 2rem 0 1rem 0;
     color: white;
     text-align: center;
     text-transform: uppercase;
@@ -522,21 +448,17 @@ header {
     gap: 0.5rem;
 }
 
-
-
-
-
 .footer-legal-container {
-  background-color: var(--primary-color);
+    background-color: var(--primary-color);
     color: white;
 }
 
-.footer-legal{
-    
+.footer-legal {
+
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 0.5rem 0;
-  
+
 }
