@@ -7,13 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Cafetano Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- lo usare luego-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
-    <link rel="stylesheet" href="./css/index.css"> 
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/desktop.css">
+    <link rel="stylesheet" href="./css/tablet.css">
 
-    
 
 </head>
 
@@ -23,15 +25,22 @@
             <p> CAFÉ 100% HONDUREÑO </p>
         </div>
         <nav class="main-navigation" aria-label="Navegación principal">
-            <button class="btn-menu" type="button" aria-label="Abrir menú">
+            <button class="btn-menu" type="button" aria-label="Abrir menú" aria-expanded="false">
                 <i class="fa-solid fa-bars" aria-hidden="true"></i>
             </button>
-            <a class="navbar-brand" href="#">
-                <img src="./imgs/logoCafe.png" alt="Logo de Café">
-            </a>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
+                <li><a href="#Tiendas">Tiendas</a></li>
+                <li><a href="#Servicios">Servicios</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
+                <li><a href="#Noticias">Noticias</a></li>
+
             </ul>
+
+            <a class="navbar-logo" href="#">
+                <img src="./imgs/logoCafe.png" alt="Logo de Café">
+            </a>
+
             <div class="nav-actions">
                 <button class="btn-search" type="button" aria-label="Buscar">
                     <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
@@ -40,43 +49,43 @@
                     <i class="fa-solid fa-earth-americas" aria-hidden="true"></i>
                 </button>
                 <button class="btn-tienda" type="button" aria-label="Ver tienda">
-                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i> 
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
                 </button>
             </div>
         </nav>
-    </header>    
+    </header>
     <main class="main-content">
-        
+
         <div>
             <div class="main-section">
                 <div class="gallery-info-visible">
                     <div class="img-section">
                         <img src="./imgs/cafe1.png" alt="Taza de café">
                     </div>
-                    <div class="aditional-info">
+                    <section class="aditional-info">
                         <h1 class="main-title">EL CAFÉ QUE NOS MUEVE</h1>
                         <p class="second-title"> Una colección especial que inspira</p>
-                        <p>Un café de <strong>Cafetano</strong> que disfrutas hoy nace de un esfuerzo en conjunto
+                        <p class="paragraph">Un café de <strong>Cafetano</strong> que disfrutas hoy nace de un esfuerzo en conjunto
                             de tres generaciones cafetaleras.
                             <br> Somos productores de café hondureño de calidad. De nuestro amor por este maravilloso
                             grano nace la excelencia detrás de cada taza que disfrutas.
                         </p>
                         <a class="btn-accion" href="index.html">Patrimonio</a>
-                    </div>
+                    </section>
                 </div>
                 <div class="gallery-info-oculta"> </div>
             </div>
-            <div>
+            <div class="second-section">
                 <div class="gallery-info-visible">
-                    <div class="img-section">
-                        <img src="./imgs/CafeMujer.png" alt="Mujer cosechando café">
+                    <div class="img-section-two">
+                        <img src="./imgs/CafeMujer.png" alt="Mujer cosechando café" loading="lazy">
                     </div>
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-logo" href="#">
                         <img src="./imgs/logoCafe.png" alt="Logo de Café">
                     </a>
                     <div class="aditional-info">
                         <p class="second-title">La excelencia es nuestra misión</p>
-                        <p>El café producido en nuestra plantación se exporta a distintos países. Ofrecemos una
+                        <p class="paragraph">El café producido en nuestra plantación se exporta a distintos países. Ofrecemos una
                             calidad excepcional en todas nuestras cafeterías Cafetano.
                             <br> Cafetano ofrece una variedad de productos basados en recetas inspirados tanto en la
                             cocina Italiaana como hondureña. El diseño eclético y original de nuestras cafeterías crea
@@ -90,17 +99,19 @@
                     <div class="info-section">
                         <p class="p-1">Cafés de calidad analizados diariamente</p>
                         <h2> Hogar de los mejores cafés </h2>
-                        <p class="p-2">En Cafetano, contamos con un equipo altamente cualificado de tostadores, cuppers
+                       <div class="fila-pie">
+                         <p class="p-2">En Cafetano, contamos con un equipo altamente cualificado de tostadores, cuppers
                             y
                             baristas para deleitar a todos los amantes del café. <br>
                             Utilizamos una amplia variedad de métodos de extracción para crear tu taza de café perfecta.
                         </p>
                         <a class="btn-services" href="index.html">Servicios</a>
 
+                       </div>                      
                     </div>
                     <div class="info-section">
                         <div class="img-section">
-                            <img src="./imgs/CafeHombre.avif" alt="Hombre haciendo café">
+                            <img src="./imgs/CafeHombre.avif" alt="Hombre haciendo café" loading="lazy">
                         </div>
                         <p>Nuestra amplia variedad de métodos de café ha sido cuidadosamente seleccionada para ofrecer
                             la mejor experiencia de café perfecta.</p>
@@ -114,7 +125,7 @@
                     </div>
                     <div class="info-section">
                         <div class="img-section">
-                            <img src="./imgs/CafeOlor.jpg" alt="Chica oliendo café">
+                            <img src="./imgs/CafeOlor.jpg" alt="Chica oliendo café" loading="lazy">
                         </div>
                         <p>Cafetano cuenta con tostadores y degustadores altamente capacitados y apasionados para crear
                             cafe de la mas alta calidad para ti.</p>
@@ -123,19 +134,19 @@
             </div>
             <div> <!-- identificar que clase nombrar-->
                 <div class="principal-info">
-                    <blockquote class="cita">  el cafe es el oro del hombre común y, al igual que el oro, transmite a cada
+                    <blockquote class="cita"> el cafe es el oro del hombre común y, al igual que el oro, transmite a
+                        cada
                         persona una sensación de lujo y nobleza</blockquote>
-                    
                     <a class="btn-more-information" href="index.html">Más información</a>
                 </div>
                 <div class="collage-info">
                     <div class="collage-img-section">
-                        <img src="./imgs/CafeInterior.jpg" alt="Interior de la cafetería">
-                        <img src="./imgs/CafeteriaExterior.jpg" alt="Exterior de la cafetería">
-                        <img src="./imgs/Coctel.jpg" alt="Bebida de cafetería">
+                        <img src="./imgs/CafeInterior.jpg" alt="Interior de la cafetería" loading="lazy">
+                        <img src="./imgs/CafeteriaExterior.jpg" alt="Exterior de la cafetería" loading="lazy">
+                        <img src="./imgs/Coctel.jpg" alt="Bebida de cafetería" loading="lazy">
 
-                        <img src="./imgs/RamasCafe.jpg" alt="ramas de café">
-                        <img src="./imgs/pizza.jpg" alt="pizza de la cafetería">
+                        <img src="./imgs/RamasCafe.jpg" alt="ramas de café" loading="lazy">
+                        <img src="./imgs/pizza.jpg" alt="pizza de la cafetería" loading="lazy">
                     </div>
                     <div class="collage-info-section">
                         <h2> Cafetano en Instagram </h2>
@@ -145,7 +156,6 @@
                         </p>
                         <button class="btn-instagram" type="button">Síguenos en instagram</button>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -183,7 +193,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-legal-container">
                 <div class="footer-legal">
                     <p>© CAFETANO. Todos los derechos reservados.</p>
@@ -193,6 +203,9 @@
         </section>
     </footer>
 
+
+
+    <script src="js/main.js"></script>
 
 </body>
 

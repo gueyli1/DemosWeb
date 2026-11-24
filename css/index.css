@@ -40,6 +40,7 @@ header {
 }
 
 .main-navigation {
+    position: relative;
     min-height: 50px;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -64,13 +65,8 @@ header {
     font-size: 20px;
 }
 
-/*
-.main-navigation .nav-links,
-.main-navigation .btn-idioma {
-    display: none;
-} */
 
-.main-navigation .navbar-brand {
+.main-navigation .navbar-logo {
     display: block;
     justify-self: center;
     float: none;
@@ -79,7 +75,7 @@ header {
     padding: 0;
 }
 
-.main-navigation .navbar-brand img {
+.main-navigation .navbar-logo img {
     display: block;
     width: 80px;
     max-width: 100%;
@@ -96,11 +92,41 @@ header {
     margin-left: 0;
 }
 
-.main-navigation .btn-menu {
-    font-size: 19px;
+.main-navigation .nav-links {
+    position: absolute;
+    top: 100%;
+    left: -50px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 50%;
+    max-height: 0;
+    overflow: hidden;
+    list-style: none;
+    background-color: #050505;
+    margin: 0;
+    padding: 0;
+    
+    transition: max-height 0.3s ease, visibility 0.3s ease;
+    visibility: hidden;
+}
+
+.main-navigation .nav-links.is-open {
+    max-height: 300px;
+    visibility: visible;
+}
+.nav-links a {
+    display: block;
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
 }
 
 
+.main-navigation .btn-menu {
+    font-size: 19px;
+}
 
 .main-content {
     width: 100%;
@@ -118,15 +144,14 @@ header {
 
 .gallery-info-visible {
     background-color: #1d1b1b;
+    position: relative;
 }
 
-.img-section {
-
+.img-section, .img-section-two {
     overflow: hidden;
-
 }
 
-.img-section img {
+.img-section img, .img-section-two img {
     display: block;
     width: 100%;
     height: auto;
@@ -172,19 +197,21 @@ header {
     margin-top: 10px;
     border-radius: 5px;
 }
+
 .btn-accion:hover,
 .btn-services:hover,
 .btn-more-information:hover,
 .btn-instagram:hover {
     background-color: #a77d50;
-} 
+}
+
 .btn-more-information,
 .btn-instagram {
     font-size: 0.9rem;
     text-transform: uppercase;
 }
 
-.gallery-info-visible .navbar-brand {
+.gallery-info-visible .navbar-logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -195,7 +222,7 @@ header {
     padding: 0;
 }
 
-.gallery-info-visible .navbar-brand img {
+.gallery-info-visible .navbar-logo img {
     display: block;
     margin-top: 10px;
     width: 100px;
@@ -234,7 +261,6 @@ header {
     font-weight: bold;
     color: black;
     font-family: "Montserrat", sans-serif;
-   
 
 
 }
@@ -244,7 +270,7 @@ header {
     padding: 0.2rem 0;
     margin-bottom: 5px;
     color: black;
-    
+
 }
 
 
@@ -263,7 +289,6 @@ header {
     padding: 0.2rem 0;
     margin-bottom: 5px;
     color: black;
-    align-items: center;
 }
 
 .principal-info {
@@ -296,9 +321,10 @@ blockquote.cita::before {
 }
 
 .collage-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: minmax(0, 900px);
+    justify-content: center;
+    gap: 0.5rem;
     text-align: center;
     padding: 1rem;
     color: black;
@@ -308,7 +334,6 @@ blockquote.cita::before {
 .collage-info .collage-img-section {
     display: grid;
     width: 100%;
-    max-width: 900px;
     aspect-ratio: 16 / 9;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -353,7 +378,8 @@ blockquote.cita::before {
 .collage-info .collage-info-section {
     display: flex;
     flex-direction: column;
-    margin-top: 0.5rem;
+    width: 100%;
+    margin: 0;
     align-items: center;
     text-align: center;
     padding: 0 0 1rem 0;
@@ -365,7 +391,6 @@ blockquote.cita::before {
     font-size: 1rem;
     padding: 0.2rem 0;
     margin-bottom: 5px;
-    align-items: center;
 
 }
 
